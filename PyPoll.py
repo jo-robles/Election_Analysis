@@ -52,26 +52,49 @@ with open(file_to_load) as election_data:
         #Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
 
+#Save the results to our text file.
+with open(file_to_save,'w') as txt_file:
+
+    #Create the string for the election results.
+    election_results = (
+        f'\nElection Results\n'
+        f'------------------------\n'
+        f'Total votes: {total_votes:,}\n'
+        f'------------------------\n')
+    
+    #Print out the election results to the terminal.
+    print(election_results, end = '')
+
+    #Save the results to the txt file. 
+    txt_file.write(election_results)
+
     #Loop through the candidate_votes dictionary for the candidate's name.
     for candidate_name in candidate_votes:
-            
+                
         #Set the votes equal to the candidate's vote value of the candidate name key.
         votes = candidate_votes[candidate_name]
 
         #Calculate the vote percentage and transform integers to float.
         vote_percentage = float(votes)/float(total_votes) * 100
-       
-        #Print out each candidate's name, vote count and percentage of votes to the terminal.
-        print(f'{candidate_name}: {vote_percentage:1f}% ({votes:,})\n')
+        
+        #Create each candidate's name, vote count and percentage of votes.
+        candidate_results = (f'{candidate_name}: {vote_percentage:1f}% ({votes:,})\n')
+        
+        #Print these results to the terminal.
+        print(candidate_results)
+
+        #Write these results to the txt file.
+        txt_file.write(candidate_results)
 
         #Determine if the votes are greater than the winning count and the percentage is greater than the winning percentage.
         if (votes > winning_count) and (vote_percentage > winning_percentage):
-            
+                
             #If both of these are true, set the votes, vote percentage and candidate to the values indicated. 
             winning_count = votes
             winning_percentage = vote_percentage
             winning_candidate = candidate_name
-
+    
+    #Create the string that holds the winners information.
     winning_candidate_summary = (
         f'---------------------------\n'
         f'Winner: {winning_candidate}\n'
@@ -79,7 +102,8 @@ with open(file_to_load) as election_data:
         f'Winning Percentage: {winning_percentage:.1f}%\n'
         f'---------------------------\n')
     
+    #Print the results to the terminal.
     print(winning_candidate_summary)
 
-#Print the candidate vote dictionary        
-print(candidate_votes)
+    #Write the winning results to the txt file.
+    txt_file.write(winning_candidate_summary)
