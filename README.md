@@ -112,7 +112,7 @@ Based on a directive from a local Board of Elections, an audit was completed uti
 
 ## Election Audit Summary
 
-As demonstrated within this audit, Python is a powerful tool that can be utilized to conduct an audit of a local election and do it quicker and more efficiently than utilizing Microsoft Excel. Now that the script is written, the audit can be completed, and the results printed out efficiently as a txt file that can be quickly and easily referenced. Taking into consideration the amount of time that would be required within Excel, utilizing the Python script here could automate this process thus saving time and money in the future. For future projects, there would be two modifications that could be considered:
+As demonstrated within this audit, Python is a powerful tool that can be utilized to conduct an audit of a local election and do it quicker and more efficiently than utilizing Microsoft Excel. Now that the script is written, the audit can be completed, and the results printed out efficiently as a txt file that can be quickly and easily referenced. Taking into consideration the amount of time that would be required within Excel, utilizing the Python script here could automate this process thus saving time and money in the future. For future projects, there would be three modifications that could be considered:
 
 * Modification for file paths:
 
