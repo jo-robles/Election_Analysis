@@ -145,3 +145,19 @@ Another consideration for future results would be to focus on those individuals 
 ```
 
 For this, a modification could be made to remove the line print(election_results, end = "") and simply have the results output to the txt file of the analysis. Doing so could eliminate two sets of data that have the final audit results (and thus eliminate chances of misinterpretation or manipulation in the future). Should it be determined that the printing to the terminal would be absolutely necessary, adding in the print() statement would be easy to do. 
+
+* Modification for multiple columns or changing columns:
+
+The current CSV file only has 3 columns making indexing of specific items fairly easy:
+
+```
+candidate_name = row[2]
+```
+
+Therefore, in anticipation of datasets with many columns, it could be useful to consider utilizing the headers created in the script:
+
+```
+headers = next(file_reader)
+```
+
+As a point of reference to index the data itself going forward for future iterations of the Python script. As mentioned however, it would depend on the exact number of columns that are present within other datasets that are present to make it worthwhile to edit the script itself. However, it could be a modification that could be considered if subsequent datasets do not match the format of the one currently utilized. 
