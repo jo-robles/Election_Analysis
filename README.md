@@ -1,6 +1,6 @@
 ## Project Overview - Election Audit
 
-Based on a directive from a local Board of Elections, an audit was completed uitilizing election data. The following tasks were completed:
+Based on a directive from a local Board of Elections, an audit was completed utilizing election data. The following tasks were completed:
 
 1. Calculation of the total number of votes cast.
 2. Calculation of the number of votes cast by each county.
@@ -112,7 +112,7 @@ Based on a directive from a local Board of Elections, an audit was completed uit
 
 ## Election Audit Summary
 
-As demonstrated within this audit, Python is a powerful tool that can be utilized to conduct an audit of a local election and do it quicker and more efficiently than utilizing Microsoft Excel. Now that the script is written, the audit can be completed and the results printed out efficiently as a txt file that can be quickly and easily referenced. Taking into consideration the amount of time that would be required within Excel, utilizing the Python script here could automate this process thus saving time and money in the future. For future projcts, there would be two modifications that could be considered:
+As demonstrated within this audit, Python is a powerful tool that can be utilized to conduct an audit of a local election and do it quicker and more efficiently than utilizing Microsoft Excel. Now that the script is written, the audit can be completed, and the results printed out efficiently as a txt file that can be quickly and easily referenced. Taking into consideration the amount of time that would be required within Excel, utilizing the Python script here could automate this process thus saving time and money in the future. For future projects, there would be two modifications that could be considered:
 
 * Modification for file paths:
 
@@ -127,11 +127,11 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 Future projects would need to either ensure that future election results are saved as CSV files with the name "election_results.csv" within a folder titled "Resources" or the script could be modified to point to another file path or file name. 
 
-Similarly, for the ouput of results, an Analysis Folder will need to be present or another file path where the results should be printed will need to be modified within the script. 
+Similarly, for the output of results, an Analysis Folder will need to be present or another file path where the results should be printed will need to be modified within the script. 
 
 * Modification for outputting results:
 
-Another consideration for future results would be to focus on those individuals who may not have as much experience with the terminal or for consideration to have one set of data present. In the original script, the results from the analyis are output into the terminal:
+Another consideration for future results would be to focus on those individuals who may not have as much experience with the terminal or for consideration to have one set of data present. In the original script, the results from the analysis are output into the terminal:
 
 ``` 
 # Print the final vote count (to terminal)
@@ -160,4 +160,4 @@ Therefore, in anticipation of datasets with many columns, it could be useful to 
 headers = next(file_reader)
 ```
 
-As a point of reference to index the data itself going forward for future iterations of the Python script. As mentioned however, it would depend on the exact number of columns that are present within other datasets that are present to make it worthwhile to edit the script itself. However, it could be a modification that could be considered if subsequent datasets do not match the format of the one currently utilized. 
+As a point of reference to index the data itself going forward for future iterations of the Python script. As mentioned however, it would depend on the exact number of columns that are present within other datasets that are present to make it worthwhile to edit the script itself. However, it could be a modification that could be considered if subsequent datasets do not match the format of the one currently utilized.
