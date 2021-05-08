@@ -21,7 +21,7 @@ Based on a directive from a local Board of Elections, an audit was completed uit
 * How many votes were cast in this congressional election?
     * Utilizing the following code:
     ```
-with open(file_to_load) as election_data:
+   with open(file_to_load) as election_data:
     reader = csv.reader(election_data)
 
     for row in reader:
